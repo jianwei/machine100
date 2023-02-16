@@ -46,9 +46,13 @@ class WriterNode(Node):
                 elif event_.type == pygame.JOYAXISMOTION:
                     axes = joystick.get_numaxes()
                     # 获取所有轴状态信息
+                    axis_list = []
                     for i in range(axes):
                         axis = joystick.get_axis(i)
-                        print("axis " + str(i) +": " + str(axis))
+                        axis_list.append(axis)
+                        # print("axis " + str(i) +": " + str(axis))
+                    print(axis_list)
+                    # 左摇杆 0,1 右摇杆3，4  
                     print("---------------------------------------------------------")
                 # 方向键改变事件
                 elif event_.type == pygame.JOYHATMOTION:
@@ -56,7 +60,9 @@ class WriterNode(Node):
                     # 获取所有方向键状态信息
                     for i in range(hats):
                         hat = joystick.get_hat(i)
-                        print("hat " + str(i) +": " + str(hat))
+                        if (hat!=(0,0)):
+                            print("hat " + str(i) +": " + str(hat))
+                            print(type(hat))
 
 
 def main(args=None):
