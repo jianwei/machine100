@@ -14,7 +14,7 @@ print("pygame:",pygame)
 print("joystick:",joystick)
 done = False
 
-clock = pygame.time.Clock()
+# clock = pygame.time.Clock()
     
 while not done:
     for event_ in pygame.event.get():

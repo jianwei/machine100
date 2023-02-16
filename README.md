@@ -9,13 +9,15 @@ conda config --set show_channel_urls yes<br>
 ## 2.colcon 
     sudo apt-get install python3-colcon-common-extensions <br>
     colcon build
-## 3
 
 
 
-## run build
+
+## 3.run build
     cd machine <br>
     colcon build<br>
+## 4.source环境
+    source install/setup.bash
 ## run test
 **run folder:**
     ros2 run xbox xbox_node
