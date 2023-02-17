@@ -9,18 +9,19 @@ class WriterNode(Node):
     def __init__(self,name):
         super().__init__(name)
         self.get_logger().info("this is %s" % name)
-        self.joy()
-        # self.command_publisher_ = self.create_publisher(String,"command", 10) 
+        self.command_publisher_ = self.create_publisher(String,"command", 10) 
         # self.timer = self.create_timer(0.5, self.timer_callback)
+        self.joy()
+        
 
-    # def timer_callback(self):
-    #     """
-    #     定时器回调函数
-    #     """
-    #     msg = String()
-    #     msg.data = json.dumps({"message":'message',"value":1,'type':2})
-    #     self.command_publisher_.publish(msg) 
-    #     self.get_logger().info(f'发布了指令：{msg.data}')    #打印一下发布的数据
+    def timer_callback(self):
+        """
+        定时器回调函数
+        """
+        msg = String()
+        msg.data = json.dumps({"message":'message',"value":1,'type':2})
+        self.command_publisher_.publish(msg) 
+        self.get_logger().info(f'发布了指令：{msg.data}')    #打印一下发布的数据
     
     def joy(self):
         # command_publisher = self.create_publisher(String,"xbox_button_input", 10) 
@@ -86,7 +87,14 @@ class WriterNode(Node):
                         # else:
                             # print("hat -else" + str(i) +": " + str(hat))
                 print(data)
+                msg = String()
+                msg.data = json.dumps(data)
+                self.command_publisher_.publish(msg) 
+                self.get_logger().info(f'发布了指令：{msg.data}')    #打印一下发布的数据
+
                 # message = json.dumps(data)
+                # self.command_publisher_.publish(message) 
+                # self.get_logger().info(f'发布了指令：{message.data}')    #打印一下发布的数据
                 # command_publisher(message)
 
 def main(args=None):
