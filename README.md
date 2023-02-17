@@ -21,3 +21,4 @@ conda config --set show_channel_urls yes<br>
 ## run test
 **run folder:**
     ros2 run xbox xbox_node
+    ros2 run electrical wheel_node

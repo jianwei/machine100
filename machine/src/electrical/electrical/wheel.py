@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-import pygame
+from  std_msgs.msg import String
 
 class WriterNode(Node):
     def __init__(self,name):
         super().__init__(name)
         self.get_logger().info("this is %s" % name)
+        # self.command_subscribe = self.create_subscription(String,"xbox_button_input",self.command_callback,10)
+
+    def command_callback(self,msg):
+        self.get_logger().info(f'收到命令:[{msg.data}]')
 
 
 

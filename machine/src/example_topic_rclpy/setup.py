@@ -1,8 +1,7 @@
 from setuptools import setup
-from glob import glob
-import os
-
-package_name = 'xbox'
+# from glob import glob
+# import os
+package_name = 'example_topic_rclpy'
 
 setup(
     name=package_name,
@@ -23,7 +22,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "xbox_node=xbox.xbox:main"
+            "topic_publisher_02 = example_topic_rclpy.topic_publisher_02:main",
+            "topic_subscribe_02 = example_topic_rclpy.topic_subscribe_02:main"
         ],
     },
 )
