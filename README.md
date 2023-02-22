@@ -34,3 +34,9 @@ conda config --set show_channel_urls yes<br>
     sudo apt-get install flex bison -y
     sudo apt-get install libelf-dev
     sudo apt-get install bc
+
+
+    sudo make -j4
+    sudo make modules_install
+    sudo make install 
+    reboot
