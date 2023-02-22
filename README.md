@@ -29,6 +29,12 @@ conda config --set show_channel_urls yes<br>
     ros2 launch all all.launch.py
 
 ## kenrel
+    add for xbox :
+    Linux Kernel Configuration
+    └─> Device Drivers
+        └─> Input device support
+            └─> Joystick interface
+
     sudo apt-get install ncurses-dev
     apt-get install libncurses5-dev libncursesw5-dev
     sudo apt-get install flex bison -y
