@@ -1,0 +1,1 @@
+docker run -it -v /Users/chenjianwei2/Desktop/machine100:/root/machine100  ros:foxy

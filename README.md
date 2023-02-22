@@ -26,4 +26,4 @@ conda config --set show_channel_urls yes<br>
 
 ## lauanch
     ros2 launch <package_name> <launch_file_name>
-    ros2 launch xbox xbox.launch.py
+    ros2 launch all all.launch.py
