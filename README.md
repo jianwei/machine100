@@ -27,3 +27,10 @@ conda config --set show_channel_urls yes<br>
 ## lauanch
     ros2 launch <package_name> <launch_file_name>
     ros2 launch all all.launch.py
+
+## kenrel
+    sudo apt-get install ncurses-dev
+    apt-get install libncurses5-dev libncursesw5-dev
+    sudo apt-get install flex bison -y
+    sudo apt-get install libelf-dev
+    sudo apt-get install bc
